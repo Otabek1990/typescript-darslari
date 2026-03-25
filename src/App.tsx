@@ -1,4 +1,5 @@
 import Card from "./Card";
+import Banner from "./components/Banner";
 import Header from "./components/Header";
 import Home from "./pages/home";
 import type { IUser, TMeva } from "./shared/types/types";
@@ -57,11 +58,10 @@ import type { IUser, TMeva } from "./shared/types/types";
 // };
 // console.log(user);
 
-
 // function types
 
 function App() {
-  // role 
+  // role
   const user: IUser = {
     ism: "abdulloh",
     yosh: 23,
@@ -91,26 +91,12 @@ function App() {
     },
   ];
   console.log(mevalar);
-  // login page tel,parol---user:{tel:"",parol:""}
-  // forma submit bolganda shu datalar console.log(objectda chiqsin);
-  // basket sahifaga 5ta props berib yuboring 2tasi majburoy bolmasin
-  // basket=[],isLogged:false,user:string;paid:boolean;
-  // 3ta role Admin,Operator,Seller; 
-  // git va github;
-  // i18n 1ta dars;
-  // pagination,filter,
-  // imtihon;
-  // next js;
+ 
   return (
     <>
       <Header id={1} ism={"Ali"} yosh={20} />
-      <Home user={user} />
-      <div className="px-16 py-5 grid grid-cols-4 gap-4">
-        {mevalar.map((item: TMeva, index: number) => (
-          <Card key={item.id} item={item} 
-          index={index} />
-        ))}
-      </div>
+      <Banner />
+     
     </>
   );
 }
